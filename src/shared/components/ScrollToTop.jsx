@@ -34,7 +34,7 @@ export default function ScrollToTop() {
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9 }}
-          className="fixed bottom-8 right-8 z-50 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl shadow-2xl shadow-cyan-500/20 hover:shadow-cyan-500/40 border border-white/10 backdrop-blur-sm transition-all duration-300 flex items-center justify-center min-w-[60px]"
+          className="fixed bottom-8 right-8 z-50 p-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-2xl shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 border border-white/10 backdrop-blur-sm transition-all duration-300 flex items-center justify-center min-w-[60px]"
           aria-label="Scroll to top"
         >
           <svg 
@@ -52,7 +52,7 @@ export default function ScrollToTop() {
           </svg>
           
           <motion.div
-            className="absolute inset-0 rounded-2xl bg-cyan-400/20"
+            className="absolute inset-0 rounded-2xl bg-emerald-400/20"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0, 0.5, 0],

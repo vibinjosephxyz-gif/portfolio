@@ -14,7 +14,7 @@ export default function Navbar() {
       ticking = true;
       requestAnimationFrame(() => {
         setScrolled(window.scrollY > 50);
-        const sections = ["about", "experience", "education", "projects", "contact"];
+        const sections = ["about", "experience", "publications", "certifications", "education", "contact"];
         let found = "top";
         sections.forEach((section) => {
           const element = document.getElementById(section);
@@ -32,15 +32,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 w-full bg-slate-900/90 backdrop-blur-xl z-50 border-b border-slate-700/50 transition-all duration-500 ${scrolled ? "shadow-2xl shadow-slate-900/50" : ""}`}>
+    <header className={`fixed top-0 left-0 w-full bg-stone-900/90 backdrop-blur-xl z-50 border-b border-stone-700/50 transition-all duration-500 ${scrolled ? "shadow-2xl shadow-stone-900/50" : ""}`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center py-3 sm:py-4 md:py-5 px-4 sm:px-6">
         <motion.a
           href="#top"
-          className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 hover:from-cyan-300 hover:via-blue-400 hover:to-blue-500 transition-all duration-300"
+          className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-500 to-teal-600 hover:from-emerald-300 hover:via-teal-400 hover:to-teal-500 transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Nibin Joseph
+          Vibin Joseph
         </motion.a>
 
         <nav className="hidden lg:flex space-x-4 lg:space-x-6 text-[13px] lg:text-sm font-medium">
@@ -48,15 +48,16 @@ export default function Navbar() {
             { id: "top", label: "Home" },
             { id: "about", label: "About" },
             { id: "experience", label: "Experience" },
+            { id: "publications", label: "Publications" },
+            { id: "certifications", label: "Certifications" },
             { id: "education", label: "Education" },
-            { id: "projects", label: "Projects" },
             { id: "contact", label: "Contact" }
           ].map((item, index) => (
             <motion.a
               key={item.id}
               href={`#${item.id}`}
               className={`relative text-white transition-all duration-300 ${
-                activeSection === item.id ? "text-cyan-400" : "hover:text-cyan-400"
+                activeSection === item.id ? "text-emerald-400" : "hover:text-emerald-400"
               }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -67,7 +68,7 @@ export default function Navbar() {
             >
               {item.label}
               <motion.div
-                className="absolute left-0 bottom-0 w-full h-[3px] bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 rounded-full"
+                className="absolute left-0 bottom-0 w-full h-[3px] bg-gradient-to-r from-emerald-400 via-teal-500 to-teal-600 rounded-full"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: activeSection === item.id ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
@@ -77,7 +78,7 @@ export default function Navbar() {
         </nav>
 
         <motion.button
-          className="lg:hidden text-white p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-slate-800/50 transition-colors backdrop-blur-sm"
+          className="lg:hidden text-white p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-stone-800/50 transition-colors backdrop-blur-sm"
           onClick={() => setNavOpen(!navOpen)}
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.05 }}
@@ -111,7 +112,7 @@ export default function Navbar() {
       <AnimatePresence>
         {navOpen && (
           <motion.div
-            className="fixed inset-0 w-full h-[100dvh] bg-slate-900/98 backdrop-blur-2xl flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-2xl sm:text-3xl z-[100]"
+            className="fixed inset-0 w-full h-[100dvh] bg-stone-900/98 backdrop-blur-2xl flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-2xl sm:text-3xl z-[100]"
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
@@ -121,15 +122,16 @@ export default function Navbar() {
               { id: "top", label: "Home" },
               { id: "about", label: "About" },
               { id: "experience", label: "Experience" },
+              { id: "publications", label: "Publications" },
+              { id: "certifications", label: "Certifications" },
               { id: "education", label: "Education" },
-              { id: "projects", label: "Projects" },
               { id: "contact", label: "Contact" }
             ].map((item, index) => (
               <motion.a
                 key={item.id}
                 href={`#${item.id}`}
                 className={`transition-all duration-300 relative group text-center font-bold tracking-tight ${
-                  activeSection === item.id ? "text-cyan-400" : "text-white"
+                  activeSection === item.id ? "text-emerald-400" : "text-white"
                 }`}
                 onClick={() => {
                   setNavOpen(false);
@@ -145,20 +147,20 @@ export default function Navbar() {
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeTabMobile"
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-cyan-400 rounded-full"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-emerald-400 rounded-full"
                   />
                 )}
               </motion.a>
             ))}
             
             <motion.button
-              className="absolute top-4 right-4 text-white p-3 rounded-xl hover:bg-slate-800/50 transition-colors"
+              className="absolute top-4 right-4 text-white p-3 rounded-xl hover:bg-stone-800/50 transition-colors"
               onClick={() => setNavOpen(false)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <span className="text-xs font-black tracking-widest bg-slate-800 px-4 py-2 rounded-lg border border-slate-700">CLOSE</span>
+              <span className="text-xs font-black tracking-widest bg-stone-800 px-4 py-2 rounded-lg border border-stone-700">CLOSE</span>
             </motion.button>
           </motion.div>
         )}

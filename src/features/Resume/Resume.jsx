@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import spcLogo from "../../assets/images/Student_Police_Cadet_Kerala_Logo.jpg";
 
 const Resume = () => {
   const { scrollYProgress } = useScroll();
@@ -9,36 +8,36 @@ const Resume = () => {
 
   const educationData = [
     {
-      title: "MCA",
-      duration: "2024 - 2026",
+      title: "Bachelor of Social Work (BSW)",
+      duration: "2023 - 2026",
       college: "Marian College Kuttikkanam (Autonomous)",
-      description: "Completed March 2026. Focused on: Full-Stack Development, AI Systems, Distributed Architectures. Overall 8.19 CGPA / 10. Major academic project: AURA — AI-Powered Safety, Wellness and Community Platform.",
-      status: "Completed",
-      color: "from-cyan-500 to-blue-600"
+      description: "Field Work: Completed 1-month concurrent placements at ICDS and CHC Vandiperiyar. Conferences: Participated in OPSTA (2023, 2025) and 21st SAMANWAYA International Conference. Memberships: Registered member of Kerala Association of Professional Social Workers (KAPS).",
+      status: "Ongoing",
+      color: "from-emerald-500 to-teal-600"
     },
     {
-      title: "BCA",
-      duration: "2021 - 2024",
-      college: "St Antony's College Peruvanthanam",
-      description: "Studied core subjects: Data Structures, DBMS, Operating Systems, Computer Networks, Web Development. Coordinated a VR experience during the tech festival.",
+      title: "Higher Secondary (Humanities)",
+      duration: "2021 - 2023",
+      college: "Seminary English studies and Plus Two completion",
+      description: "Completed higher secondary education focusing on humanities subjects.",
       status: "Completed",
-      color: "from-blue-500 to-cyan-600"
+      color: "from-teal-500 to-emerald-600"
     },
     {
-      title: "Schooling",
-      duration: "2009 - 2021",
-      college: "St Joseph Higher Secondary School Peruvanthanam",
-      description: "Completed secondary education with core sciences and mathematics.",
+      title: "SSLC",
+      duration: "2020",
+      college: "Schooling",
+      description: "Completed secondary education. Participated in Little KITE program and served in the Scout and Guide program.",
       status: "Completed",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-emerald-400 to-teal-500"
     },
   ];
 
   return (
-    <section id="education" className="py-8 sm:py-10 md:py-16 bg-slate-900 text-white relative overflow-hidden">
+    <section id="education" className="py-8 sm:py-10 md:py-16 bg-stone-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-10 sm:top-20 right-10 sm:right-20 w-48 h-48 sm:w-80 sm:h-80 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-10 sm:top-20 right-10 sm:right-20 w-48 h-48 sm:w-80 sm:h-80 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -50,7 +49,7 @@ const Resume = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-56 h-56 sm:w-96 sm:h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"
+          className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-56 h-56 sm:w-96 sm:h-96 bg-gradient-to-r from-teal-500/10 to-emerald-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1.1, 1, 1.1],
             opacity: [0.3, 0.5, 0.3],
@@ -71,13 +70,13 @@ const Resume = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-500 to-teal-600">
             Education
           </span>
         </motion.h2>
 
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl text-slate-300 text-center mb-12 sm:mb-16 md:mb-20 max-w-4xl sm:max-w-5xl mx-auto px-2 sm:px-4"
+          className="text-lg sm:text-xl md:text-2xl text-stone-300 text-center mb-12 sm:mb-16 md:mb-20 max-w-4xl sm:max-w-5xl mx-auto px-2 sm:px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -87,7 +86,7 @@ const Resume = () => {
         </motion.p>
 
         <div className="relative">
-          <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 w-1 sm:w-2 h-full bg-gradient-to-b from-cyan-500 via-blue-600 to-blue-700 rounded-full shadow-2xl"></div>
+          <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 w-1 sm:w-2 h-full bg-gradient-to-b from-emerald-500 via-teal-600 to-teal-700 rounded-full shadow-2xl"></div>
 
           <div className="space-y-8 sm:space-y-12 md:space-y-16">
             {educationData.map((item, index) => (
@@ -100,27 +99,27 @@ const Resume = () => {
                 viewport={{ once: true, margin: "-100px" }}
               >
                 <motion.div 
-                  className="absolute left-4 sm:left-1/2 transform -translate-x-1/2 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full border-2 sm:border-4 border-slate-900 z-10 shadow-lg"
+                  className="absolute left-4 sm:left-1/2 transform -translate-x-1/2 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full border-2 sm:border-4 border-stone-900 z-10 shadow-lg"
                   whileHover={{ scale: 1.2 }}
                 />
 
                 <div className={`w-full sm:w-5/12 pl-12 sm:pl-0 ${index % 2 === 0 ? 'sm:pr-10' : 'sm:pl-10'}`}>
                   <motion.div 
-                    className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl transition-colors duration-500 hover:border-cyan-500/40"
+                    className="bg-stone-800/30 backdrop-blur-xl border border-stone-700/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl transition-colors duration-500 hover:border-emerald-500/40"
                     whileHover={{ 
                       y: -5,
-                      boxShadow: "0 25px 50px -12px rgba(6, 182, 212, 0.15)"
+                      boxShadow: "0 25px 50px -12px rgba(16, 185, 129, 0.15)"
                     }}
                     style={{ y }}
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6 gap-3 sm:gap-0">
                       <div className="flex items-center space-x-3 sm:space-x-4">
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-cyan-400">{item.title}</h3>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-emerald-400">{item.title}</h3>
                       </div>
                       <span 
                         className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold self-start sm:self-auto ${
                           item.status === 'Completed' 
-                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' 
+                            ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' 
                             : 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
                         }`}
                       >
@@ -129,13 +128,13 @@ const Resume = () => {
                     </div>
 
                     <div className="space-y-3 sm:space-y-4">
-                      <p className="text-cyan-300 font-medium text-sm sm:text-base md:text-lg">
+                      <p className="text-emerald-300 font-medium text-sm sm:text-base md:text-lg">
                         {item.duration}
                       </p>
-                      <p className="text-slate-200 font-semibold text-lg sm:text-xl">
+                      <p className="text-stone-200 font-semibold text-lg sm:text-xl">
                         {item.college}
                       </p>
-                      <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+                      <p className="text-stone-300 leading-relaxed text-sm sm:text-base">
                         {item.description}
                       </p>
                     </div>
@@ -146,33 +145,6 @@ const Resume = () => {
           </div>
         </div>
 
-        <motion.div
-          className="mt-12 sm:mt-16 md:mt-20 bg-slate-800/30 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-700/50 shadow-2xl"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(6, 182, 212, 0.15)" }}
-        >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-cyan-400 mb-6 sm:mb-8 text-center flex items-center justify-center gap-2 sm:gap-3">
-            Achievements & Activities
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 p-4 sm:p-6 bg-slate-700/30 rounded-xl sm:rounded-2xl border border-slate-600/50 hover:border-cyan-500/30 transition-colors">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-slate-800 border border-slate-600 overflow-hidden flex-shrink-0 shadow-lg p-1.5">
-                <img src={spcLogo} alt="SPC Logo" className="w-full h-full object-contain" loading="lazy" />
-              </div>
-              <div>
-                <h4 className="text-lg sm:text-xl font-semibold text-slate-200 mb-2">Student Police Cadet (SPC)</h4>
-                <p className="text-slate-300 text-sm sm:text-base">Participated in structured leadership and civic training focused on discipline, teamwork, and public safety.</p>
-              </div>
-            </div>
-            <div className="text-center p-4 sm:p-6 bg-slate-700/30 rounded-xl sm:rounded-2xl border border-slate-600/50 hover:border-cyan-500/30 transition-colors">
-              <h4 className="text-lg sm:text-xl font-semibold text-slate-200 mb-2 sm:mb-3">Technical Coordination</h4>
-              <p className="text-slate-300 text-sm sm:text-base">Coordinated and managed Virtual Reality experience at a college tech fest.</p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

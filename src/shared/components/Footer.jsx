@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white py-10 sm:py-12 md:py-16 relative overflow-hidden">
-      
+    <footer className="bg-stone-900 text-white py-10 sm:py-12 md:py-16 relative overflow-hidden">
+
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-10 sm:top-10 left-10 sm:left-10 w-48 h-48 sm:w-80 sm:h-80 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-10 sm:top-10 left-10 sm:left-10 w-48 h-48 sm:w-80 sm:h-80 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             rotate: [0, 180, 360],
@@ -20,7 +20,7 @@ export default function Footer() {
           }}
         />
         <motion.div
-          className="absolute bottom-10 sm:bottom-10 right-10 sm:right-10 w-56 h-56 sm:w-96 sm:h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"
+          className="absolute bottom-10 sm:bottom-10 right-10 sm:right-10 w-56 h-56 sm:w-96 sm:h-96 bg-gradient-to-r from-teal-500/10 to-emerald-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1.3, 1, 1.3],
             rotate: [360, 180, 0],
@@ -33,10 +33,10 @@ export default function Footer() {
         />
       </div>
 
-      
-      <div className="border-t-2 border-gradient-to-r from-cyan-500 via-blue-600 to-blue-700 w-full mb-8 sm:mb-12 relative">
+
+      <div className="border-t-2 border-gradient-to-r from-emerald-500 via-teal-600 to-teal-700 w-full mb-8 sm:mb-12 relative">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-600 to-blue-700 opacity-50"
+          className="absolute inset-0 bg-gradient-to-r from-emerald-500 via-teal-600 to-teal-700 opacity-50"
           animate={{
             backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
           }}
@@ -49,8 +49,8 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 relative z-10 flex flex-col items-center">
-        
-        <motion.div 
+
+        <motion.div
           className="w-full max-w-2xl px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,21 +59,17 @@ export default function Footer() {
         >
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {[
-              { href: "https://linktr.ee/nibin__", label: "Linktree" },
-              { href: "https://www.linkedin.com/in/nibin-joseph05/", label: "LinkedIn" },
-              { href: "https://github.com/nibin-joseph05", label: "GitHub" },
-              { href: "https://www.instagram.com/_.n_.i_.b_.i_.n", label: "Instagram" },
-              { href: "mailto:nibin.joseph.career@gmail.com", label: "Email" }
+              { href: "mailto:vibinjosephxyz@gmail.com", label: "Email" }
             ].map((social, index) => (
-              <motion.a 
+              <motion.a
                 key={index}
-                href={social.href} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="p-2.5 bg-slate-900/50 hover:bg-slate-700/50 rounded-xl border border-slate-700 text-center text-[9px] font-bold uppercase tracking-widest text-slate-300 hover:text-cyan-400 hover:border-cyan-500/50 transition-all font-sans min-w-[100px]"
-                whileHover={{ 
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 bg-stone-900/50 hover:bg-stone-700/50 rounded-xl border border-stone-700 text-center text-[9px] font-bold uppercase tracking-widest text-stone-300 hover:text-emerald-400 hover:border-emerald-500/50 transition-all font-sans min-w-[100px]"
+                whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 0 20px rgba(6, 182, 212, 0.15)"
+                  boxShadow: "0 0 20px rgba(16, 185, 129, 0.15)"
                 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 10 }}
@@ -87,16 +83,16 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        
-        <motion.div 
-          className="mt-12 sm:mt-16 pt-8 border-t border-slate-800/50 w-full text-center"
+
+        <motion.div
+          className="mt-12 sm:mt-16 pt-8 border-t border-stone-800/50 w-full text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <p className="text-slate-500 text-[10px] uppercase font-bold tracking-[0.3em] font-sans">
-            Nibin Joseph • Last Updated: March 2026
+          <p className="text-stone-500 text-[10px] uppercase font-bold tracking-[0.3em] font-sans">
+            Vibin Joseph • Last Updated: July 2026
           </p>
         </motion.div>
       </div>
